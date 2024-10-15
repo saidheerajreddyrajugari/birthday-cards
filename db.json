@@ -1,0 +1,30 @@
+{"users":[
+    {
+        "id":0,
+        "name":"dheeraj",
+        "dob":"04-10-2002",
+        "age":22,
+        "src":"https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg"
+    },
+    {
+        "id":1,
+        "name":"prashanth",
+        "dob":"04-10-2003",
+        "age":21,
+        "src":"https://cdn.pixabay.com/photo/2021/07/05/14/07/dog-6389277_1280.jpg"
+    },
+    {
+        "id":2,
+        "name":"sravan",
+        "dob":"04-10-2002",
+        "age":22,
+        "src":"https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_1280.jpg"
+    },
+    {
+        "id":3,
+        "name":"venky",
+        "dob":"04-10-2003",
+        "age":21,
+        "src":"https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg"
+     }
+]}

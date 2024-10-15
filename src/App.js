@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { useState,useEffect } from 'react'
+import axios from 'axios'
 
-function App() {
+const App = () => {
+    let[api,setApi]=useState([])
+
+    useEffect(()=>{
+        axios.get("http://localhost:2020/users").then(x=>setApi(x.data)).catch(()=>alert("Api fetching failed"))
+
+    },[])
+    // console.log(api);
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="birthday">
+        <h1 id="head">{api.length} Birthdays Today</h1>
+        {api.map((x,y)=>{
+            return(
+                <div key={y} className="bcard">
+                    <img src={x.src}  className="propic" alt="photo"/>
+                    <div className="bdet">
+                        <h1>{x.name}</h1>
+                    <p>D.O.B: <b>{x.dob}</b></p>
+                        <p>Age: <b>{x.age}</b></p></div>
+                </div>
+            )
+        })}
+        <button id="clear" onClick={()=>setApi([])}>Clear</button>
+
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
